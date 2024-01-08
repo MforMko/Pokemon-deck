@@ -5,7 +5,7 @@ let pokemonList = [
 ];
 
 // Loop through the pokemonList array
-for (let i = 0; i < pokemonList.length; i++) {
+/*for (let i = 0; i < pokemonList.length; i++) {
     // Get the current Pokemon object
     let currentPokemon = pokemonList[i];
     //conditional to check height & make a remark
@@ -16,5 +16,18 @@ for (let i = 0; i < pokemonList.length; i++) {
 
     // Print the name and height of the current Pokemon
     (document.write(`<p><b>Name:</b> ${currentPokemon.name}    <b>Height:</b> ${currentPokemon.height}m </p><br>`));
-    }
 
+*/
+pokemonList.forEach(function(pokemon) {
+    document.write('<b>Name: </b>' + pokemon.name + ' ' + '<b>Height: </b>' + pokemon.height + 'm' + '<br>');
+    
+    });
+
+/* pokemonList.forEach((pokemon) => document.write(name, height));*/
+
+/*pokemonList.forEach(logToConsole);
+
+function logToConsole(pokemon) {
+    logToConsole(pokemon);
+}
+*/
