@@ -48,8 +48,10 @@ let pokemonRepository = (function(){
     imageElement.src = pokemon.imageUrl;
 
     let typesElement = document.createElement('p');
-    typesElement.innerText = 'Type: ' + pokemon.types.join(", ") + "</p>";
+    typesElement.innerText = 'Type: ' + pokemon.types.map(obj=>obj.type.name).join(", ");
     
+    
+
     modal.appendChild(closeButtonElement);
     modal.appendChild(nameElement);
     modal.appendChild(heightElement);
