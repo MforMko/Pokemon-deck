@@ -14,6 +14,8 @@ let pokemonRepository = (function(){
     let button = document.createElement("button");
     listItem.classList.add("list-group-item");
     button.innerText = pokemon.name;
+    button.setAttribute('data-bs-toggle', 'modal');
+    button.setAttribute('data-bs-target', '#exampleModal')
     button.classList.add("btn", "btn-primary", "btn-lg");
     listItem.appendChild(button);
     pokemonList.appendChild(listItem);
@@ -27,12 +29,11 @@ let pokemonRepository = (function(){
     // Clear all existing modal content
     modalContainer.innerHTML = '';
 
-    // let modal = document.createElement('div');
-    // modal.classList.add('modal');
+    
 
     // Add the new modal content
     let closeButtonElement = document.createElement('button');
-    closeButtonElement.classList.add('modal-close');
+    closeButtonElement.classList.add('btn', 'modal-close');
     closeButtonElement.innerText = 'Close';
     closeButtonElement.addEventListener('click', hideModal);
 
@@ -53,12 +54,12 @@ let pokemonRepository = (function(){
 
 
 
-    modal.appendChild(closeButtonElement);
-    modal.appendChild(nameElement);
-    modal.appendChild(heightElement);
-    modal.appendChild(imageElement);
-    modal.appendChild(typesElement);
-    modal.appendChild(weightElement);
+    modalContainer.appendChild(closeButtonElement);
+    modalContainer.appendChild(nameElement);
+    modalContainer.appendChild(heightElement);
+    modalContainer.appendChild(imageElement);
+    modalContainer.appendChild(typesElement);
+    modalContainer.appendChild(weightElement);
   
     modalContainer.classList.add('is-visible');
 
@@ -74,7 +75,7 @@ let pokemonRepository = (function(){
 
 
   function hideModal() {
-    let modalContainer = document.querySelector('#modal-container');
+    let modalContainer = document.querySelector('#exampleModal');
     modalContainer.classList.remove('is-visible');
 
     window.addEventListener('keydown', (e) => {

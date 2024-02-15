@@ -6,6 +6,10 @@ html {
 
 }
 
+header {
+  padding: 2em;
+}
+
 a {
   color: white;
 }
@@ -39,6 +43,7 @@ list-style-type: none;
 display: flex;
 flex-direction: column;
 align-content: center;
+margin-top: 100px;
 }
 
 h1 {
@@ -81,8 +86,8 @@ display: none;
 position: fixed;
 padding: 20px;
 box-sizing: border-box;
-top: 0;
-left: 0;
+/*top: 0;
+left: 0; */
 width: 100%;
 height: 100%;
 background: rgba(0, 0, 0, 0.5);
@@ -133,4 +138,18 @@ width: 40%;
 p {
 font-weight: bold;
 font-size: 1.5em;
+}
+
+.page-container {
+  margin-top: 100px;
+  
+}
+
+.navbar-brand {
+  cursor: pointer;
+  
+} 
+
+ .navbar-nav {
+  float: right;
 }
