@@ -33,7 +33,7 @@ let pokemonRepository = (function(){
 
     // Add the new modal content
     let closeButtonElement = document.createElement('button');
-    closeButtonElement.classList.add('btn', 'modal-close');
+    closeButtonElement.classList.add('btn','modal-close');
     closeButtonElement.innerText = 'Close';
     closeButtonElement.addEventListener('click', hideModal);
 
@@ -85,9 +85,7 @@ let pokemonRepository = (function(){
       }
     });
   }
-  //This is the method I need to edit to show a modal 
-  //with the Pokémon’s name, its height, and an image 
-  //of the Pokémon
+ 
   function showDetails (pokemon) {
     loadDetails(pokemon).then(function () {
       /*console.log(pokemon);*/

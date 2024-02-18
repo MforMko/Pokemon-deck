@@ -76,7 +76,7 @@ width: 15%;
 align-content: center;
 padding-left: 40%;
 }
-}
+
 
 #modal-container {
 display: none;
@@ -99,7 +99,7 @@ z-index: 999;
 overflow: auto; 
 
 /* this is used to center the modal */
-display: grid;
+/* display: grid; */
 text-align: center;
 }
 
@@ -145,7 +145,7 @@ font-size: 1.5em;
   
 }
 
-.navbar-brand {
+.navbar-brand.hover {
   cursor: pointer;
   
 } 
